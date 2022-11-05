@@ -17,9 +17,6 @@ export const loadMovies = () => dispatch => {
                 movies: movieList
             })
         })
-
-
-
         .catch((error) => {
             console.error(error);
         })
