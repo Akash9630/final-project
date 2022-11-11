@@ -5,12 +5,14 @@ import Signupform from "./components/Signup.js";
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import reducer from './redux/reducers/MovieReducer'
+import rootReducer from './redux/reducers/Redux';
 import Dashboard from './components/Dashboard';
 
 const store = createStore(
-  reducer,
-  window._REDUXDEVTOOLS_EXTENSION_ && window._REDUX_DEVTOOLS_EXTENSION_(), applyMiddleware(thunk)
+  rootReducer,
+  window._REDUXDEVTOOLS_EXTENSION_ &&
+  window._REDUX_DEVTOOLS_EXTENSION_(),
+  applyMiddleware(thunk)
 )
 
 function App() {

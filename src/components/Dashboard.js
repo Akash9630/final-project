@@ -8,7 +8,7 @@ const Dashboard = (props) => {
 
     useEffect(() => {
         dispatcher(loadMovies())
-    }, [])
+    }, [dispatcher])
 
     return (
         <>
