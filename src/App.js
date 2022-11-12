@@ -18,16 +18,14 @@ const store = createStore(
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        <BrowserRouter>
-          <Routes>
-            <Route path="/Loginform" element={<Loginform />} />
-            <Route path="/Signupform" element={<Signupform />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="*" element={<Loginform />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/Loginform" element={<Loginform />} />
+          <Route path="/Signupform" element={<Signupform />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="*" element={<Loginform />} />
+        </Routes>
+      </BrowserRouter>
     </Provider>
   )
 }

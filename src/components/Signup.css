@@ -1,57 +1,50 @@
-body {
-  background-color: rgb(34, 193, 195);
-  background: linear-gradient(
-    135deg,
-    rgba(34, 193, 195, 1) 0%,
-    rgba(253, 187, 45, 1) 100%
-  );
-}
-.container {
+.signupContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
-.loginform {
+.signupForm {
   background-color: #ffffff;
   border-radius: 25px;
   max-width: 500px;
   min-width: 400px;
   min-height: 400px;
-  line-height: 2rem;
+  line-height: 2.5rem;
   text-align: center;
 }
-.headerTitle {
-  text-align: center;
-  padding: 2rem 0;
+.signupHeadTitle {
+  padding: 1rem 0;
   font-size: 2rem;
 }
-.row {
+.formev {
   font-size: 1.3rem;
 }
-.row label {
-  padding-bottom: 0.5rem;
+
+.formev label {
   color: rgba(187, 187, 187, 0.9);
 }
-.row input {
+
+.formev input {
   border: none;
   font-size: 1.3rem;
   padding-left: 2rem;
   box-shadow: inset 0px -3px 0px rgba(187, 187, 187, 0.2);
   transition: box-shadow 0.2s ease-in;
 }
-.row input:focus {
+.shadow:focus {
   box-shadow: inset 0px -3px 0px 0px rgba(34, 193, 195, 0.7);
   outline: none;
 }
-
-.row input:hover::-webkit-input-placeholder,
-.row input:focus::-webkit-input-placeholder {
+input[type="radio"] {
+  accent-color: green;
+}
+.formev input:hover::-webkit-input-placeholder,
+.formev input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
 
-.row button {
+.formev button {
   border-radius: 25px;
   width: 80%;
   height: 40px;
@@ -69,27 +62,14 @@ body {
   transition: opacity 0.25s ease-out;
 }
 
-.row button:hover {
+.formev button:hover {
   opacity: 0.8;
 }
 
-.button {
+button {
+  margin: 1rem 0;
+}
+
+.loginlink {
   padding: 1rem 0;
-}
-
-#iconGroup {
-  display: flex;
-  padding: 1rem 0;
-  justify-content: space-around;
-  margin: 0 25px;
-}
-
-#alternativeLogin {
-  text-align: center;
-  font-size: 1.3rem;
-}
-
-.signup {
-  font-size: 1.3rem;
-  padding-bottom: 2rem;
 }
