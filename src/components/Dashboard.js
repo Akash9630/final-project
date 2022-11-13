@@ -2,8 +2,11 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { loadMovies } from "../API/Axios/MovieListApi"
 
-const Dashboard = (props) => {
-    const movies = useSelector(store => { return store })
+const Dashboard = () => {
+    const movies = useSelector(store => { return store.task.movieList })
+    const movieData = JSON.stringify(movies)
+    console.log(JSON.stringify(movieData))
+
     const dispatcher = useDispatch()
 
     useEffect(() => {
@@ -13,7 +16,12 @@ const Dashboard = (props) => {
     return (
         <>
             <h1>Dashboard</h1>
-            {JSON.stringify(movies)}
+            {/* {JSON.stringify(movies)} */}
+            {/* {movies.map((movie) => (<span key="movie.imdb_id">{movie.original_title}</span>)
+            )} */}
+            {/* task.movieList.original_title */}
+            {movieData}
+
         </>
     )
 }
