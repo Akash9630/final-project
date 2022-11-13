@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { loadMovies } from "../API/Axios/MovieListApi"
+import MovieListItem from "./MovieListItem"
 
 const Dashboard = () => {
     const movies = useSelector(store => { return store.task.movieList })
