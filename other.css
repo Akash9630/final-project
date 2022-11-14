@@ -24,3 +24,13 @@ body {
   margin: 0;
   font-size: 2rem;
 }
+/* 
+{movies.map((item) => {
+                return (
+                    <ul key={item.imdbID}>
+                        <li>
+                            {item.Title}
+                        </li>
+                    </ul>
+                )
+            })} */

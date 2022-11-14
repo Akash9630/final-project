@@ -4,9 +4,17 @@ import { loadMovies } from "../API/Axios/MovieListApi"
 import MovieListItem from "./MovieListItem"
 
 const Dashboard = () => {
-    const movies = useSelector(store => { return store.task.movieList })
-    const movieData = JSON.stringify(movies)
-    console.log(JSON.stringify(movieData))
+    const movies = useSelector(store => {
+        if (store.task.movieList?.Search) {
+            return store.task.movieList.Search
+        }
+        else {
+            return []
+        }
+
+
+
+    })
 
     const dispatcher = useDispatch()
 
@@ -16,14 +24,17 @@ const Dashboard = () => {
 
     return (
         <>
-            <h1>Dashboard</h1>
-            {/* {JSON.stringify(movies)} */}
-            {/* {movies.map((movie) => (<span key="movie.imdb_id">{movie.original_title}</span>)
-            )} */}
-            {/* task.movieList.original_title */}
-            {movieData}
-
+            {movies?.map(item =>
+                <MovieListItem
+                    title={item.Title}
+                    poster={item.Poster}
+                    type={item.Type}
+                    year={item.Year}
+                />
+            )
+            }
         </>
     )
 }
 export default Dashboard
+
