@@ -1,8 +1,0 @@
-.dashboard_container {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.dasboard_child {
-  align-self: center;
-}

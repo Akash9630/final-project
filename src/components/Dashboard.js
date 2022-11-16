@@ -23,9 +23,11 @@ const Dashboard = () => {
     }, [dispatcher])
 
     return (
-        <>
-            {movies?.map(item =>
+        <div className="main-container">
+
+            {movies?.map((item, index) =>
                 <MovieListItem
+                    key={index}
                     title={item.Title}
                     poster={item.Poster}
                     type={item.Type}
@@ -33,7 +35,7 @@ const Dashboard = () => {
                 />
             )
             }
-        </>
+        </div >
     )
 }
 export default Dashboard

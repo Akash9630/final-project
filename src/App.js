@@ -7,6 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './redux/reducers/Redux';
 import Dashboard from './components/Dashboard';
+import "./App.css"
 
 const store = createStore(
   rootReducer,
@@ -17,16 +18,18 @@ const store = createStore(
 
 function App() {
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/Loginform" element={<Loginform />} />
-          <Route path="/Signupform" element={<Signupform />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="*" element={<Loginform />} />
-        </Routes>
-      </BrowserRouter>
-    </Provider>
+    <div className='container-background'>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/Loginform" element={<Loginform />} />
+            <Route path="/Signupform" element={<Signupform />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="*" element={<Loginform />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+    </div>
   )
 }
 export default App;

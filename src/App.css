@@ -1,0 +1,47 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container-background {
+    background-image: linear-gradient(to right, #f1b1b1, #82e6e8);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container-background {
+    background-image: linear-gradient(45deg, blue, red);
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .container-background {
+      background-image: linear-gradient(0.25turn, red, 10%, blue);
+    }
+    /* .poster {
+      float: left;
+    } */
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container-background {
+    background-image: linear-gradient(45deg, red 0 50%, blue 50% 100%);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container-background {
+    background-image: linear-gradient(to left, #333, #333 50%, #eee 100%);
+  }
+}
+.main-container {
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  padding: 50px;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
